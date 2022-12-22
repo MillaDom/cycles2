@@ -26,6 +26,7 @@ public class StatsService {
         }
         return maxMonth + 1;
     }
+
     public int minSales(long[] sales) { // номер месяца с минимальными продажами
         int minMonth = 0;
         int month = 0; // переменная для индекса рассматриваемого месяца в массиве
@@ -40,21 +41,21 @@ public class StatsService {
         return minMonth + 1;
     }
 
-    public int underAverage (long[] sales) { // кол-во месяцев с продажами ниже среднего
+    public int underAverage(long[] sales) { // кол-во месяцев с продажами ниже среднего
         int counter = 0;
         for (long sale : sales) {
             if (sale < averageSumMonth(sales)) {
-                counter ++;
+                counter++;
             }
         }
         return counter;
     }
 
-    public int upperAverage (long[] sales) { // кол-во месяцев с продажами выше среднего
+    public int upperAverage(long[] sales) { // кол-во месяцев с продажами выше среднего
         int counter = 0;
         for (long sale : sales) {
             if (sale > averageSumMonth(sales)) {
-                counter ++;
+                counter++;
             }
         }
         return counter;
